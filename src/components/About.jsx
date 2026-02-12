@@ -38,7 +38,7 @@ const About = () => {
 
     return (
         <section id="about" className="py-20 px-4 max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-start">
-            <div className="w-full md:w-1/3 sticky top-24">
+            <div className="w-full md:w-1/3 md:sticky md:top-24">
                 <div className="relative group">
                     <div className="absolute -inset-1 bg-gradient-to-r from-tech-primary to-tech-secondary opacity-75 blur group-hover:opacity-100 transition duration-1000"></div>
                     <div className="relative aspect-[3/4] overflow-hidden tech-border bg-black">
