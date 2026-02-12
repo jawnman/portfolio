@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+
+@layer base {
+  body {
+    @apply bg-tech-bg text-tech-accent font-sans selection:bg-tech-primary selection:text-black;
+  }
+}
+
+@layer utilities {
+  .tech-border {
+    @apply border border-tech-muted hover:border-tech-primary transition-colors duration-300;
+  }
+
+  .glitch-text {
+    @apply relative inline-block;
+  }
+
+  .glitch-text::before,
+  .glitch-text::after {
+    @apply content-[''] absolute top-0 left-0 w-full h-full bg-tech-bg opacity-50 hidden;
+  }
+
+  .glitch-text:hover::before {
+    @apply block animate-glitch text-tech-primary -translate-x-0.5 translate-y-0.5;
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  }
+
+  .glitch-text:hover::after {
+    @apply block animate-glitch text-tech-secondary translate-x-0.5 -translate-y-0.5;
+    clip-path: polygon(0 80%, 100% 20%, 100% 100%, 0 100%);
+    animation-delay: 75ms;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-tech-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-tech-muted hover:bg-tech-primary rounded;
+}
