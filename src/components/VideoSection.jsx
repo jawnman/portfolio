@@ -7,6 +7,7 @@ const videos = [
     { id: 4, title: 'CROWD_LIGHTS // ATMOSPHERE', src: 'https://www.youtube.com/embed/U_JrrFIf8sE' },
     { id: 5, title: 'LIVE_CLIP // YOU_MAKE_ME_SICK', src: 'https://www.youtube.com/embed/b8DcEpMp7bs' },
     { id: 6, title: 'ODD MOB // LIVE_CLIP', src: 'https://www.youtube.com/embed/61FvqWC0J90' },
+    { id: 7, title: 'MOTION_DESIGN', src: 'https://www.youtube.com/embed/dVETCKq1U-8' },
 ];
 
 const VideoSection = () => {
