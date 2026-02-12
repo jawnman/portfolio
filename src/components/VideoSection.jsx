@@ -15,7 +15,7 @@ const VideoSection = () => {
         <section id="video" className="py-20 px-4 max-w-7xl mx-auto bg-tech-muted/10">
             <div className="mb-12 border-b border-tech-muted pb-4 text-right">
                 <h2 className="text-3xl md:text-5xl font-bold font-mono text-tech-secondary uppercase">
-                    02 // MOTION_PICTURE
+                    02 // VIDEO
                 </h2>
                 <span className="text-tech-muted font-mono text-sm hidden md:inline-block">
                     // RECENT_CAPTURES
