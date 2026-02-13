@@ -8,9 +8,15 @@ const WarpText = ({ text, className, hoverRange = 200 }) => {
 
     const handleMouseMove = (e) => {
         const rect = containerRef.current.getBoundingClientRect();
-        // Track mouse relative to the container for correct distance calculations
         mouseX.set(e.clientX - rect.left);
         mouseY.set(e.clientY - rect.top);
+    };
+
+    const handleTouchMove = (e) => {
+        const touch = e.touches[0];
+        const rect = containerRef.current.getBoundingClientRect();
+        mouseX.set(touch.clientX - rect.left);
+        mouseY.set(touch.clientY - rect.top);
     };
 
     const handleMouseLeave = () => {
@@ -23,7 +29,10 @@ const WarpText = ({ text, className, hoverRange = 200 }) => {
             ref={containerRef}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
-            className={`flex justify-center cursor-default py-4 ${className}`} // Added padding to catch mouse easier
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleMouseLeave}
+            className={`flex justify-center cursor-default py-4 ${className}`}
+            style={{ touchAction: 'none' }}
         >
             {text.split('').map((char, i) => (
                 <InteractiveSpan
