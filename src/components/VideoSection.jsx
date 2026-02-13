@@ -3,6 +3,7 @@ import React from 'react';
 const videos = [
     { id: 1, title: 'OF MICE & MEN // RECAP', src: 'https://www.youtube.com/embed/m2vRPprt8X0' },
     { id: 2, title: 'OF MICE & MEN // RECAP', src: 'https://www.youtube.com/embed/vg_PD5wGqdI' },
+    { id: 3, title: 'WARPED TOUR ORLANDO // RECAP', src: 'https://www.youtube.com/embed/kPEWA7M4MD8' },
     { id: 2, title: 'OF MICE & MEN // PROMO_LOOP', src: 'https://www.youtube.com/embed/Uzo6mYRcHcQ' },
     { id: 3, title: 'CROWD_LIGHTS // ATMOSPHERE', src: 'https://www.youtube.com/embed/U_JrrFIf8sE' },
     { id: 4, title: 'LIVE_CLIP // YOU_MAKE_ME_SICK', src: 'https://www.youtube.com/embed/b8DcEpMp7bs' },
