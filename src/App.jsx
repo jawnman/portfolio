@@ -8,6 +8,8 @@ import About from './pages/About';
 
 import { userImages } from './constants/images';
 
+import { Analytics } from "@vercel/analytics/react"
+
 function App() {
   // Preload first batch of images for instant Gallery load
   React.useEffect(() => {
@@ -44,6 +46,7 @@ function App() {
             © {new Date().getFullYear()} NICK_ROEHM. SYSTEM_ONLINE.
           </p>
         </footer>
+        <Analytics />
       </div>
     </Router>
   );
