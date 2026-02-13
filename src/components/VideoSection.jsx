@@ -1,13 +1,13 @@
 import React from 'react';
 
 const videos = [
-    { id: 1, title: 'ERRA', src: 'https://www.youtube.com/embed/JLAcv_s7q4s' },
+    { id: 1, title: 'OF MICE & MEN // RECAP', src: 'https://www.youtube.com/embed/vg_PD5wGqdI' },
     { id: 2, title: 'OF MICE & MEN // PROMO_LOOP', src: 'https://www.youtube.com/embed/Uzo6mYRcHcQ' },
-    { id: 3, title: 'OF MICE & MEN // RECAP', src: 'https://www.youtube.com/embed/vg_PD5wGqdI' },
-    { id: 4, title: 'CROWD_LIGHTS // ATMOSPHERE', src: 'https://www.youtube.com/embed/U_JrrFIf8sE' },
-    { id: 5, title: 'LIVE_CLIP // YOU_MAKE_ME_SICK', src: 'https://www.youtube.com/embed/b8DcEpMp7bs' },
-    { id: 6, title: 'ODD MOB // LIVE_CLIP', src: 'https://www.youtube.com/embed/61FvqWC0J90' },
-    { id: 7, title: 'MOTION_DESIGN', src: 'https://www.youtube.com/embed/dVETCKq1U-8' },
+    { id: 3, title: 'CROWD_LIGHTS // ATMOSPHERE', src: 'https://www.youtube.com/embed/U_JrrFIf8sE' },
+    { id: 4, title: 'LIVE_CLIP // YOU_MAKE_ME_SICK', src: 'https://www.youtube.com/embed/b8DcEpMp7bs' },
+    { id: 5, title: 'ODD MOB // LIVE_CLIP', src: 'https://www.youtube.com/embed/61FvqWC0J90' },
+    { id: 6, title: 'MOTION_DESIGN', src: 'https://www.youtube.com/embed/dVETCKq1U-8' },
+    { id: 7, title: 'ERRA', src: 'https://www.youtube.com/embed/JLAcv_s7q4s' },
 ];
 
 const VideoSection = () => {
