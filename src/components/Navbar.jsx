@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Camera, Film, User } from 'lucide-react';
+import { Menu, X, Camera, Film, User, Instagram } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import WarpText from './WarpText';
 
@@ -40,6 +40,14 @@ const Navbar = () => {
                                     <span className={`absolute bottom-0 left-0 h-0.5 bg-tech-primary transition-all duration-300 ${location.pathname === link.path ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
                                 </Link>
                             ))}
+                            <a
+                                href="https://www.instagram.com/nick.roehm/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group relative px-3 py-2 text-sm font-medium font-mono text-tech-accent hover:text-tech-primary transition-colors"
+                            >
+                                <Instagram size={18} />
+                            </a>
                         </div>
                     </div>
 
@@ -74,6 +82,16 @@ const Navbar = () => {
                                     {link.name}
                                 </Link>
                             ))}
+                            <a
+                                href="https://www.instagram.com/nick.roehm/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={() => setIsOpen(false)}
+                                className="flex items-center gap-3 px-3 py-4 text-base font-medium font-mono hover:bg-tech-muted hover:text-tech-primary transition-colors"
+                            >
+                                <Instagram size={18} />
+                                INSTAGRAM
+                            </a>
                         </div>
                     </motion.div>
                 )}
