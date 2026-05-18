@@ -1,6 +1,7 @@
 import React from 'react';
 
 const videos = [
+    { id: 11, title: 'NEW_CLIP', src: 'https://www.youtube.com/embed/zTL2pVTJ9vE' },
     { id: 1, title: 'AVE RECAP', src: 'https://www.youtube.com/embed/0AUxnl_QlXI' },
     { id: 2, title: 'OF MICE & MEN // RECAP', src: 'https://www.youtube.com/embed/m2vRPprt8X0' },
     { id: 3, title: 'OF MICE & MEN // RECAP', src: 'https://www.youtube.com/embed/vg_PD5wGqdI' },
