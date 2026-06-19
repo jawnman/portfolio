@@ -41,9 +41,9 @@ function App() {
           </Routes>
         </main>
 
-        <footer className="py-8 text-center border-t border-tech-muted/30">
-          <p className="font-mono text-xs text-tech-muted">
-            © {new Date().getFullYear()} NICK_ROEHM. SYSTEM_ONLINE.
+        <footer className="py-8 text-center border-t border-tech-muted/40">
+          <p className="text-xs tracking-wide text-tech-secondary">
+            © {new Date().getFullYear()} Nick Roehm
           </p>
         </footer>
         <Analytics />

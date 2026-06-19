@@ -66,11 +66,8 @@ const Lightbox = ({ image, onClose, onNext, onPrev }) => {
                     <img
                         src={`/images_optimized/${image}`}
                         alt="Full size view"
-                        className="max-w-full max-h-[90vh] object-contain tech-border"
+                        className="max-w-full max-h-[90vh] object-contain"
                     />
-                    <div className="absolute bottom-[-40px] left-0 right-0 text-center font-mono text-tech-primary text-sm">
-                        {image}
-                    </div>
                 </motion.div>
             </motion.div>
         </AnimatePresence>

@@ -2,26 +2,25 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Camera, Film, User, Instagram } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import WarpText from './WarpText';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const location = useLocation();
 
     const navLinks = [
-        { name: 'HOME', path: '/', icon: User },
-        { name: 'PHOTOS', path: '/photos', icon: Camera },
-        { name: 'VIDEO', path: '/video', icon: Film },
-        { name: 'ABOUT', path: '/about', icon: User },
+        { name: 'Home', path: '/', icon: User },
+        { name: 'Photos', path: '/photos', icon: Camera },
+        { name: 'Video', path: '/video', icon: Film },
+        { name: 'About', path: '/about', icon: User },
     ];
 
     return (
-        <nav className="fixed w-full z-50 bg-tech-bg/90 backdrop-blur-md border-b border-tech-muted">
+        <nav className="fixed w-full z-50 bg-tech-bg/80 backdrop-blur-md border-b border-tech-muted/60">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-20">
-                    <div className="flex-shrink-0 cursor-pointer">
-                        <Link to="/" className="text-2xl font-bold font-mono tracking-tighter">
-                            <WarpText text="NICK ROEHM" className="!py-0" hoverRange={50} />
+                    <div className="flex-shrink-0">
+                        <Link to="/" className="font-display text-xl font-semibold tracking-tight text-tech-accent hover:text-white transition-colors">
+                            Nick Roehm
                         </Link>
                     </div>
 
@@ -31,20 +30,18 @@ const Navbar = () => {
                                 <Link
                                     key={link.name}
                                     to={link.path}
-                                    className={`group relative px-3 py-2 text-sm font-medium font-mono transition-colors ${location.pathname === link.path ? 'text-tech-primary' : 'text-tech-accent hover:text-tech-primary'}`}
+                                    className={`relative py-2 text-sm tracking-wide transition-colors ${location.pathname === link.path ? 'text-tech-primary' : 'text-tech-secondary hover:text-tech-accent'}`}
                                 >
-                                    <span className="relative z-10 flex items-center gap-2">
-                                        <link.icon size={16} className={`transition-opacity -ml-6 absolute ${location.pathname === link.path ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} />
-                                        <span className={`transition-transform duration-300 ${location.pathname === link.path ? 'translate-x-4' : 'group-hover:translate-x-4'}`}>{link.name}</span>
-                                    </span>
-                                    <span className={`absolute bottom-0 left-0 h-0.5 bg-tech-primary transition-all duration-300 ${location.pathname === link.path ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
+                                    <span>{link.name}</span>
+                                    <span className={`absolute bottom-0 left-0 h-px bg-tech-primary transition-all duration-300 ${location.pathname === link.path ? 'w-full' : 'w-0 hover:w-full'}`}></span>
                                 </Link>
                             ))}
                             <a
                                 href="https://www.instagram.com/nick.roehm/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group relative px-3 py-2 text-sm font-medium font-mono text-tech-accent hover:text-tech-primary transition-colors"
+                                className="text-tech-secondary hover:text-tech-accent transition-colors"
+                                aria-label="Instagram"
                             >
                                 <Instagram size={18} />
                             </a>
@@ -55,6 +52,7 @@ const Navbar = () => {
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             className="text-tech-accent hover:text-tech-primary transition-colors"
+                            aria-label="Toggle menu"
                         >
                             {isOpen ? <X size={24} /> : <Menu size={24} />}
                         </button>
@@ -68,7 +66,7 @@ const Navbar = () => {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-tech-bg border-b border-tech-muted overflow-hidden"
+                        className="md:hidden bg-tech-bg border-b border-tech-muted/60 overflow-hidden"
                     >
                         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                             {navLinks.map((link) => (
@@ -76,7 +74,7 @@ const Navbar = () => {
                                     key={link.name}
                                     to={link.path}
                                     onClick={() => setIsOpen(false)}
-                                    className={`flex items-center gap-3 px-3 py-4 text-base font-medium font-mono transition-colors ${location.pathname === link.path ? 'bg-tech-muted text-tech-primary' : 'hover:bg-tech-muted hover:text-tech-primary'}`}
+                                    className={`flex items-center gap-3 px-3 py-4 text-base tracking-wide transition-colors ${location.pathname === link.path ? 'text-tech-primary' : 'text-tech-secondary hover:text-tech-accent'}`}
                                 >
                                     <link.icon size={18} />
                                     {link.name}
@@ -87,10 +85,10 @@ const Navbar = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 onClick={() => setIsOpen(false)}
-                                className="flex items-center gap-3 px-3 py-4 text-base font-medium font-mono hover:bg-tech-muted hover:text-tech-primary transition-colors"
+                                className="flex items-center gap-3 px-3 py-4 text-base tracking-wide text-tech-secondary hover:text-tech-accent transition-colors"
                             >
                                 <Instagram size={18} />
-                                INSTAGRAM
+                                Instagram
                             </a>
                         </div>
                     </motion.div>

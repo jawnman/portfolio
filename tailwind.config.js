@@ -8,30 +8,19 @@ export default {
     extend: {
       colors: {
         tech: {
-          bg: '#050505',
-          primary: '#00f0ff', // Cyan/Electric Blue
-          secondary: '#7000ff', // Deep Purple
-          accent: '#ffffff',
-          muted: '#2a2a2a',
+          bg: '#0a0a0a',        // warm near-black
+          primary: '#c2a878',   // muted gold accent
+          secondary: '#9a9a96',  // warm neutral gray
+          accent: '#f5f5f4',    // near-white text
+          muted: '#26241f',     // subtle warm border
         },
       },
       fontFamily: {
-        mono: ['"JetBrains Mono"', 'monospace'],
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['"Space Grotesk"', 'Inter', 'sans-serif'],
+        // legacy alias kept so existing `font-mono` classes render the modern sans
+        mono: ['"Space Grotesk"', 'Inter', 'sans-serif'],
       },
-      animation: {
-        'glitch': 'glitch 1s linear infinite',
-      },
-      keyframes: {
-        glitch: {
-          '0%': { transform: 'translate(0)' },
-          '20%': { transform: 'translate(-2px, 2px)' },
-          '40%': { transform: 'translate(-2px, -2px)' },
-          '60%': { transform: 'translate(2px, 2px)' },
-          '80%': { transform: 'translate(2px, -2px)' },
-          '100%': { transform: 'translate(0)' },
-        }
-      }
     },
   },
   plugins: [],
