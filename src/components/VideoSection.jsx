@@ -8,10 +8,6 @@ const videos = [
     { id: 4, title: 'Warped Tour Orlando — Recap', src: 'https://www.youtube.com/embed/kPEWA7M4MD8' },
     { id: 5, title: 'Of Mice & Men — Promo', src: 'https://www.youtube.com/embed/Uzo6mYRcHcQ' },
     { id: 6, title: 'Crowd Lights — Atmosphere', src: 'https://www.youtube.com/embed/U_JrrFIf8sE' },
-    { id: 7, title: 'Live Clip — You Make Me Sick', src: 'https://www.youtube.com/embed/b8DcEpMp7bs' },
-    { id: 8, title: 'Odd Mob — Live Clip', src: 'https://www.youtube.com/embed/61FvqWC0J90' },
-    { id: 9, title: 'Motion Design', src: 'https://www.youtube.com/embed/dVETCKq1U-8' },
-    { id: 10, title: 'Erra', src: 'https://www.youtube.com/embed/JLAcv_s7q4s' },
 ];
 
 const VideoSection = () => {
