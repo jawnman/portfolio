@@ -1,6 +1,7 @@
 // Dynamically generated list of user images
 export const userImages = [
     // --- Featured: pyro / flames / crowd shots (shown first) ---
+    "Photo May 09 2026, 07 33 16.jpg",   // B&W crowd candid
     "DSC02176.jpg",                      // guitarist over festival crowd
     "DSC02390.jpg",                      // vocalist in smoke + light
     "DSC07277.jpg",                      // drummer, flame jets + festival crowd
