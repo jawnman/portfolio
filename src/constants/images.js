@@ -1,6 +1,12 @@
 // Dynamically generated list of user images
 export const userImages = [
     // --- Featured: pyro / flames / crowd shots (shown first) ---
+    "DSC07277.jpg",                      // drummer, flame jets + festival crowd
+    "Photo Jun 09 2024, 09 05 00.jpg",   // performer over massive festival crowd
+    "Photo Sep 18 2025, 19 20 40.jpg",   // stage pyro
+    "DSC08296.jpg",                      // crowd / pit
+    "Photo Aug 02 2024, 22 52 51.jpg",   // arena crowd
+    "Photo Jun 28 2024, 14 34 49.jpg",   // golden-hour festival crowd
     "DSC07401.jpg",                      // flame jets + festival crowd
     "Photo Aug 21 2023, 20 36 10.jpg",   // stage flames + arena crowd
     "DSC04767.jpg",                      // pyro fireballs + crowd
