@@ -1,5 +1,10 @@
 import React from 'react';
 
+const featured = {
+    title: 'Show Reel — 2025/2026',
+    src: 'https://www.youtube.com/embed/3wN78qVXH0I',
+};
+
 const videos = [
     { id: 11, title: 'People Watching 156 / Silence', src: 'https://www.youtube.com/embed/zTL2pVTJ9vE' },
     { id: 1, title: 'Ave Recap', src: 'https://www.youtube.com/embed/0AUxnl_QlXI' },
@@ -20,6 +25,22 @@ const VideoSection = () => {
                 <p className="text-tech-secondary mt-3">
                     Recaps, music videos, and tour films.
                 </p>
+            </div>
+
+            <div className="mb-16">
+                <div className="relative aspect-video overflow-hidden bg-black tech-border">
+                    <iframe
+                        className="w-full h-full"
+                        src={featured.src}
+                        title={featured.title}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                    ></iframe>
+                </div>
+                <h3 className="mt-4 text-lg md:text-xl font-medium text-tech-accent">
+                    {featured.title}
+                </h3>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
