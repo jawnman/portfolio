@@ -41,12 +41,12 @@ const Hero = () => {
                     transition={{ delay: 0.5, duration: 0.8 }}
                     className="flex flex-col md:flex-row gap-4 justify-center items-center"
                 >
-                    <Link
-                        to="/photos"
+                    <a
+                        href="#explore"
                         className="px-8 py-3 bg-tech-primary text-black text-sm tracking-wide font-medium hover:bg-white transition-colors"
                     >
-                        View Portfolio
-                    </Link>
+                        Explore the Work
+                    </a>
                     <Link
                         to="/about"
                         className="group px-8 py-3 text-tech-secondary text-sm tracking-wide hover:text-white transition-colors"
@@ -65,7 +65,6 @@ const Hero = () => {
                 transition={{ delay: 1, duration: 0.8 }}
                 className="group absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-tech-secondary hover:text-tech-primary transition-colors"
             >
-                <span className="text-[0.7rem] tracking-[0.3em] uppercase">Explore the work</span>
                 <motion.span
                     animate={{ y: [0, 8, 0] }}
                     transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}

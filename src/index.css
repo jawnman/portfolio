@@ -3,6 +3,9 @@
 
 
 @layer base {
+  html {
+    @apply scroll-smooth;
+  }
   body {
     @apply bg-tech-bg text-tech-accent font-sans antialiased selection:bg-tech-primary selection:text-black;
   }
