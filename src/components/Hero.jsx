@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
 
 const Hero = () => {
     return (
-        <section className="relative h-screen flex items-center justify-center overflow-hidden bg-black">
+        <section className="relative min-h-[88vh] flex items-center justify-center overflow-hidden bg-black">
             {/* Background image */}
             <div className="absolute inset-0 z-0">
                 <img
@@ -55,15 +56,24 @@ const Hero = () => {
                 </motion.div>
             </div>
 
-            {/* Scroll indicator */}
-            <motion.div
+            {/* Scroll cue — jumps to the Photography / Motion tiles below */}
+            <motion.a
+                href="#explore"
+                aria-label="Scroll down to explore photography and motion"
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1, y: [0, 10, 0] }}
-                transition={{ delay: 1, duration: 2, repeat: Infinity }}
-                className="absolute bottom-10 left-1/2 -translate-x-1/2 text-tech-secondary/70 text-xs tracking-[0.3em] uppercase"
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1, duration: 0.8 }}
+                className="group absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-tech-secondary hover:text-tech-primary transition-colors"
             >
-                Scroll
-            </motion.div>
+                <span className="text-[0.7rem] tracking-[0.3em] uppercase">Explore the work</span>
+                <motion.span
+                    animate={{ y: [0, 8, 0] }}
+                    transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}
+                    className="flex h-11 w-11 items-center justify-center rounded-full border border-tech-primary/40 group-hover:border-tech-primary group-hover:bg-tech-primary/10 transition-colors"
+                >
+                    <ChevronDown size={22} className="text-tech-primary" />
+                </motion.span>
+            </motion.a>
         </section>
     );
 };
