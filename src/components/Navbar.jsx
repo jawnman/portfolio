@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Camera, Film, User, Instagram } from 'lucide-react';
+import { Menu, X, Camera, Film, Clapperboard, User, Instagram } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
@@ -11,6 +11,7 @@ const Navbar = () => {
         { name: 'Home', path: '/', icon: User },
         { name: 'Photos', path: '/photos', icon: Camera },
         { name: 'Video', path: '/video', icon: Film },
+        { name: 'Post Cards', path: '/postcards', icon: Clapperboard },
         { name: 'About', path: '/about', icon: User },
     ];
 

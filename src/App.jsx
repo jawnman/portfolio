@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Photos from './pages/Photos';
 import Video from './pages/Video';
+import PostCards from './pages/PostCards';
 import About from './pages/About';
 
 import { userImages } from './constants/images';
@@ -37,6 +38,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/photos" element={<Photos />} />
             <Route path="/video" element={<Video />} />
+            <Route path="/postcards" element={<PostCards />} />
             <Route path="/about" element={<About />} />
           </Routes>
         </main>

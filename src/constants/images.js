@@ -1,5 +1,8 @@
 // Dynamically generated list of user images
 export const userImages = [
+    // --- Latest additions (BMTH) ---
+    "DSC01380.jpg",                      // BMTH — new
+    "DSC_1121.jpg",                      // BMTH — new
     // --- Featured: pyro / flames / crowd shots (shown first) ---
     "Photo May 09 2026, 07 33 16.jpg",   // B&W crowd candid
     "DSC02176.jpg",                      // guitarist over festival crowd
